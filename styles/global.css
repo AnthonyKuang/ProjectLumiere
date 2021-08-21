@@ -1,0 +1,5 @@
+/* Project Lumiere uses TailwindCSS https://tailwindcss.com/ for website styling */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
