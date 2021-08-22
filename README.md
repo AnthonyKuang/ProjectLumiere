@@ -25,7 +25,7 @@ Please install [VS Code](https://code.visualstudio.com). Then install these exte
 6. [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 7. [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-These extensions provide the syntax highlighting, code suggestions, language recognition, code formatting, and code sharing necessary for our workflow.
+These extensions provide the syntax highlighting, autocompletion, code formatting, and code sharing capabilities necessary for our workflow.
 
 ### VS Code Settings
 
