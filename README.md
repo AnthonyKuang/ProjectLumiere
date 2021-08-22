@@ -97,7 +97,7 @@ This will install all the NPM packages that are listed as dependencies, as defin
 
 ## VS Code and Development Server
 
-Next, open the ProjectLumiere folder in VS Code. Open the VS Code integrated terminal with `ctrl + ~` and run the following to spin up the local [Next.js development server]():
+Next, open the ProjectLumiere folder in VS Code. Open the VS Code integrated terminal with `ctrl` + `~` and run the following to spin up the local [Next.js development server]():
 
 ```bash
 npm run dev
