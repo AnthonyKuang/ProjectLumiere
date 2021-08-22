@@ -4,8 +4,6 @@ Welcome to **Project Lumiere!** 🎉
 
 Our website, [projectlumiere.org](https://www.projectlumiere.org), is created with [Next.js](https://nextjs.org), a framework that builds on top of [React.js](https://reactjs.org). React is in turn built on top of JavaScript. It is styled with [TailwindCSS](https://tailwindcss.com), the utility-first CSS framworks. We are deployed 🚀 on [Vercel](https://vercel.com).
 
-## Prerequisites for Developers
-
 Due to a cutting-edge stack, contributors must be, at the very minimum, proficient in the following technologies:
 
 1. JavaScript (React.js knowledge preferred)
@@ -71,28 +69,6 @@ You will need a working [Git](https://git-scm.com) installation on your machine.
 git --version
 ```
 
-### Github
-
-At this point, you will have been added as a contributor to this repo.
-
-# Learning
-
-We highly recommend a background in HTML, CSS, and JavaScript. The framework we use, Next.js, is full-featured and complex, so much that it powers household names such as TikTok, Twitch, AT&T, and [others](https://nextjs.org/showcase).
-
-## Resources to level up as a developer! 🦸
-
-Official documentation is usually the best and most comprehensive resource. We recommend these resources if you need support in a specific area:
-
-- Roadmap for learning resources: [roadmap.sh](https://roadmap.sh)
-- HTML: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- CSS: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- JavaScript: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- React: [FreeCodeCamp Crash Course](https://www.youtube.com/watch?v=4UZrsTqkcW4)
-- React Hooks: [Ben Awad](https://www.youtube.com/watch?v=f687hBjwFcM)
-- Next.js: [Next.js Learn Course](https://nextjs.org/learn)
-
-> Some of the best web development YouTube channels that I've come across are [Ben Awad](https://www.youtube.com/user/99baddawg), [Lee Robinson](https://www.youtube.com/user/MaStaleee), and [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
-
 # Making your first contribution
 
 You are now ready to `git clone` the repo code and start making commits of your own! 🆒
@@ -126,6 +102,24 @@ In your browser, open http://localhost:3000 to view the application.
 ### Making Changes
 
 The Next.js development server comes with live reloading, which means that your changes are live. Try editing the content in `/pages/index.js`. When you press `ctrl` + `s` to save, your change will immediately be reflected.
+
+## Pushing your changes onto GitHub
+
+Please checkout a new GitHub branch to commit your changes to. Run the command, replacing with your choice of a branch name:
+
+```bash
+git checkout -b ＜new branch name＞
+```
+
+Then, run the following commands to commit and push your code.
+
+```base
+git add .
+git commit -m "<your commit message here>"
+git push origin <new branch name>
+```
+
+That's it! Your code will now be pushed to a new branch, and upon my review, your branch will be merged into the production `main` branch. Your changes will then reflect on the website deployed on https://www.projectlumiere.org! 🚀
 
 # Explanation of the code
 
@@ -170,3 +164,22 @@ export default function Home() {
 > Note the use of className in JSX to pass in TailwindCSS classes
 
 TailwindCSS includes classes for CSS Flexbox, CSS Grid, responsive breakpoints, dark mode variants, event variants, z-index, and many more use cases. Please refer to the [official documentation](https://tailwindcss.com) to learn more!
+
+# Learning
+
+We highly recommend a background in HTML, CSS, and JavaScript. The framework we use, Next.js, is full-featured and complex, so much that it powers industry-leading companies such as TikTok, Twitch, AT&T, and [others](https://nextjs.org/showcase).
+
+## Resources to level up as a developer! 🦸
+
+Official documentation is usually the best and most comprehensive resource. We recommend these resources if you need support in a specific area:
+
+- Roadmap for learning resources: [roadmap.sh](https://roadmap.sh)
+- HTML: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- CSS: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- JavaScript: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- React: [FreeCodeCamp Crash Course](https://www.youtube.com/watch?v=4UZrsTqkcW4)
+- React Hooks: [Ben Awad](https://www.youtube.com/watch?v=f687hBjwFcM)
+- Next.js: [Next.js Learn Course](https://nextjs.org/learn)
+- TailwindCSS: [TailwindCSS Documentation](https://tailwindcss.com)
+
+> Some of the best web development YouTube channels that I've come across are [Ben Awad](https://www.youtube.com/user/99baddawg), [Lee Robinson](https://www.youtube.com/user/MaStaleee), and [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
