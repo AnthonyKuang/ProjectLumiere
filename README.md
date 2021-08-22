@@ -139,7 +139,7 @@ Tips and resources for common questions about the codebase!
 - `/public` is a Next.js-specific directory. It contains static resources, such as images. See https://nextjs.org/docs/basic-features/static-file-serving.
 - `/styles` contains the CSS used to style our application. We use TailwindCSS, which is exported in `/styles/global.css`.
 
-> There are comments on many files that describe the use case and links to resources!
+> There are comments on many files that describe the use case with links to resources!
 
 ## Next.js
 
@@ -153,4 +153,20 @@ Because of Next.js and their Webpack config, there are some optimizations and *m
 
 ## TailwindCSS
 
-## Sanity.io
+Utility CSS classes such as px-4 and mr-12 that allow you to style JSX without ever touching a CSS file. The code written can look a little messy, but is super easy to maintain because the JSX and CSS are all in the same place! The aim of using TailwindCSS is to keep the learning curve low from a vanilla CSS background while improving developer experience.
+
+TailwindCSS + Next.js produces files like these:
+
+```jsx
+export default function Home() {
+  return (
+    <div className='flex flex-col justify-center items-start max-w-2xl mx-auto mb-16'>
+      <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white hover:text-purple-400'>This is an H1!</h1>
+    </div>
+  )
+}
+```
+
+> Note the use of className in JSX to pass in TailwindCSS classes
+
+TailwindCSS includes classes for CSS Flexbox, CSS Grid, responsive breakpoints, dark mode variants, event variants, z-index, and many more use cases. Please refer to the [official documentation](https://tailwindcss.com) to learn more!
