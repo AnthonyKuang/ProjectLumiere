@@ -2,7 +2,6 @@
 // See https://tailwindcss.com/docs/configuration
 
 const { fontFamily } = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
@@ -11,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        light: '#fff',
-        dark: '#151317',
+        light: '#fcfcfd',
+        dark: '#141416',
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
