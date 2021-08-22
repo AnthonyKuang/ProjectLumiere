@@ -75,6 +75,24 @@ git --version
 
 At this point, you will have been added as a contributor to this repo.
 
+# Learning
+
+We highly recommend a background in HTML, CSS, and JavaScript. The framework we use, Next.js, is full-featured and complex, so much that it powers household names such as TikTok, Twitch, AT&T, and [others](https://nextjs.org/showcase).
+
+## Resources to level up as a developer! 🦸
+
+Official documentation is usually the best and most comprehensive resource. We recommend these resources if you need support in a specific area:
+
+- Roadmap for learning resources: [roadmap.sh](https://roadmap.sh)
+- HTML: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- CSS: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- JavaScript: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- React: [FreeCodeCamp Crash Course](https://www.youtube.com/watch?v=4UZrsTqkcW4)
+- React Hooks: [Ben Awad](https://www.youtube.com/watch?v=f687hBjwFcM)
+- Next.js: [Next.js Learn Course](https://nextjs.org/learn)
+
+> Some of the best web development YouTube channels that I've come across are [Ben Awad](https://www.youtube.com/user/99baddawg), [Lee Robinson](https://www.youtube.com/user/MaStaleee), and [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+
 # Making your first contribution
 
 You are now ready to `git clone` the repo code and start making commits of your own! 🆒
@@ -111,9 +129,27 @@ The Next.js development server comes with live reloading, which means that your 
 
 # Explanation of the code
 
+Tips and resources for common questions about the codebase!
+
 ## File structure
 
+- `/components` contains custom components that are used throughout the website.
+- `/lib` contains any code related to third-party libraries, in addition to any utility functions.
+- `/pages` is a Next.js-specific directory. Paths of our website are defined here. See https://nextjs.org/docs/basic-features/pages.
+- `/public` is a Next.js-specific directory. It contains static resources, such as images. See https://nextjs.org/docs/basic-features/static-file-serving.
+- `/styles` contains the CSS used to style our application. We use TailwindCSS, which is exported in `/styles/global.css`.
+
+> There are comments on many files that describe the use case and links to resources!
+
 ## Next.js
+
+Because of Next.js and their Webpack config, there are some optimizations and *magic* 🧙 happening behind the scenes that greatly benefit the developer experience, but can be confusing at the start.
+
+- HTML `<image>` tags are replaced by the `<Image />` component imported from [`next/image`](https://nextjs.org/docs/basic-features/image-optimization). This component is heavily optimized and reduces load time.
+- HTML `<a>` tags are replaced by the `<Link />` component imported from [`next/link`](https://nextjs.org/docs/api-reference/next/link). This component allows other pages to be prerendered, resulting in a faster website.
+- Page paths can be defined in the `/pages` directory. Note that there are a variety of *special* pages, namely `pages/_app.js`, `pages/_document.js`, `pages/404.js`, and `pages/500.js`.
+- Data fetching and pre-rendering are huge topics in Next.js, but are complicated without a solid background in React. If you are interested, however, please read https://nextjs.org/docs/basic-features/data-fetching.
+  - `getStaticProps`, `getStaticPaths`, `getServerSideProps`, Static Site Generation (SSG), Server Side Rendering (SSR), Incremental Static Regeneration (ISR) are all covered here
 
 ## TailwindCSS
 
