@@ -6,7 +6,7 @@ Our website, [projectlumiere.org](https://www.projectlumiere.org), is created wi
 
 Due to a cutting-edge stack, contributors must be, at the very minimum, proficient in the following technologies:
 
-1. JavaScript (React.js knowledge preferred)
+1. JavaScript (React.js and JSX knowledge helpful)
 2. Semantic HTML
 3. CSS
 4. Git and GitHub
@@ -167,7 +167,7 @@ TailwindCSS includes classes for CSS Flexbox, CSS Grid, responsive breakpoints, 
 
 # Learning
 
-We highly recommend a background in HTML, CSS, and JavaScript. The framework we use, Next.js, is full-featured and complex, so much that it powers industry-leading companies such as TikTok, Twitch, AT&T, and [others](https://nextjs.org/showcase).
+We highly recommend a background in HTML, CSS, and JavaScript. The framework we use, Next.js, is full-featured and complex - it powers industry-leading companies such as TikTok, Twitch, AT&T, and many [others](https://nextjs.org/showcase).
 
 ## Resources to level up as a developer! 🦸
 
