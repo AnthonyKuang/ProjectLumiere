@@ -182,4 +182,4 @@ Official documentation is usually the best and most comprehensive resource. We r
 - Next.js: [Next.js Learn Course](https://nextjs.org/learn)
 - TailwindCSS: [TailwindCSS Documentation](https://tailwindcss.com)
 
-> Some of the best web development YouTube channels that I've come across are [Ben Awad](https://www.youtube.com/user/99baddawg), [Lee Robinson](https://www.youtube.com/user/MaStaleee), and [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+> Some of the best web development YouTube channels that I've come across are [Ben Awad](https://www.youtube.com/user/99baddawg), [Lee Robinson](https://www.youtube.com/user/MaStaleee), and [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg). [Fireship](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA) also has useful shorts that can serve as an introduction to a language or framework.
