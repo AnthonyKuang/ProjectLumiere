@@ -103,4 +103,18 @@ Next, open the ProjectLumiere folder in VS Code. Open the VS Code integrated ter
 npm run dev
 ```
 
-On your browser, open http://localhost:3000 to view the application.
+In your browser, open http://localhost:3000 to view the application.
+
+### Making Changes
+
+The Next.js development server comes with live reloading, which means that your changes are live. Try editing the content in `/pages/index.js`. When you press `ctrl` + `s` to save, your change will immediately be reflected.
+
+# Explanation of the code
+
+## File structure
+
+## Next.js
+
+## TailwindCSS
+
+## Sanity.io
