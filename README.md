@@ -147,7 +147,7 @@ Because of Next.js and their Webpack config, there are some optimizations and *m
 
 ## TailwindCSS
 
-Utility CSS classes such as px-4 and mr-12 that allow you to style JSX without ever touching a CSS file. The code written can look a little messy, but is super easy to maintain because the JSX and CSS are all in the same place! The aim of using TailwindCSS is to keep the learning curve low from a vanilla CSS background while improving developer experience.
+Utility CSS classes such as px-4 and mr-12 that allow you to style JSX without ever touching a CSS file. The code written can look a little messy, but is super easy to maintain because the JSX and CSS are all in the same place! The aim of using TailwindCSS is to keep the learning curve low from a vanilla CSS background while having an incredible developer experience.
 
 TailwindCSS + Next.js produces files like these:
 
