@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "eslint-import-resolver-typescript": "^2.4.0",
     "next": "11.1.0",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
