@@ -15,7 +15,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
-        mono: ['Source Code Pro', fontFamily.mono],
       },
     },
   },

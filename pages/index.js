@@ -22,7 +22,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section className='max-w-5xl relative inline-block font-mono bottom-28 p-14 bg-black opacity-75 backdrop-filter backdrop-blur-sm rounded-3xl shadow-2xl'>
+      <section className='max-w-5xl relative inline-block bottom-28 p-14 bg-black opacity-75 backdrop-filter backdrop-blur-sm rounded-3xl shadow-2xl'>
         <h1 className='text-4xl leading-snug text-gray-200 font-semibold'>
           We are championing{' '}
           <span className='text-green-600 font-bold'>Computer Science</span> for

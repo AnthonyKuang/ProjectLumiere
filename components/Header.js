@@ -3,13 +3,13 @@ import { FiChevronDown, FiSearch } from 'react-icons/fi';
 
 export default function Header() {
   return (
-    <header className='border-b border-[#e6e8ec] dark:border-[#353945] py-5 z-10 sticky top-0 bg-light opacity-90 dark:bg-dark backdrop-filter backdrop-blur-2xl backdrop-saturate-150'>
+    <header className='border-b border-[#e6e8ec] dark:border-[#353945] py-5 z-10 sticky top-0 bg-light opacity-80 dark:bg-dark backdrop-filter backdrop-blur-2xl backdrop-saturate-150'>
       <div className='flex items-center max-w-7xl mx-auto px-20'>
         <Link href='/'>
           <a>
             <figure className='flex items-center border-r border-[#e6e8ec] dark:border-[#353945] pr-8'>
               <div className='w-10 h-10 bg-gray-200 dark:bg-gray-700 mr-3'></div>
-              <figcaption className='text-gray-700 dark:text-gray-300 text-3xl font-semibold'>
+              <figcaption className='text-gray-700 dark:text-gray-300 text-2xl font-semibold'>
                 Lumiere
               </figcaption>
             </figure>
