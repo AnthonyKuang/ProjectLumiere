@@ -5,12 +5,17 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Layout from '@components/layouts/Layout';
+import { Gradient } from '@lib/gradient';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    const gradient = new Gradient();
+    gradient.initGradient('.gradient-canvas');
+  }, []);
 
   return (
     <div>
@@ -20,15 +25,23 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
+      <div className=''>
+        <canvas
+          className='gradient-canvas'
+          data-js-darken-top
+          data-transition-in
+        ></canvas>
+      </div>
+
+      <h1 className='text-6xl font-extrabold text-purple-500 dark:text-blue-500'>
+        Bruh
+      </h1>
+
       {mounted && (
         <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
           Change theme
         </button>
       )}
-
-      <h1 className='text-6xl font-extrabold text-purple-500 dark:text-blue-500'>
-        Bruh
-      </h1>
     </div>
   );
 }

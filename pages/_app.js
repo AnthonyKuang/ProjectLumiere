@@ -8,7 +8,7 @@ export default function ProjectLumiere({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(
-    <ThemeProvider attribute='class'>
+    <ThemeProvider attribute='class' defaultTheme='dark'>
       <Component {...pageProps} />
     </ThemeProvider>
   );
