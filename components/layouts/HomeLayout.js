@@ -19,7 +19,7 @@ export default function HomeLayout({ children }) {
           data-transition-in
         ></canvas>
       </div>
-      <main className='max-w-7xl mx-auto px-20'>{children}</main>
+      <div className='max-w-7xl mx-auto px-20'>{children}</div>
       <Footer />
     </div>
   );
