@@ -3,20 +3,20 @@ import { FiChevronDown, FiSearch } from 'react-icons/fi';
 
 export default function Header() {
   return (
-    <header className='sticky-navbar h-20 flex items-center opacity-80 border-b border-[#e6e8ec] dark:border-[#353945] z-10 bg-light dark:bg-dark'>
+    <header className='sticky-navbar h-20 flex items-center opacity-90 border-b border-gray-200 dark:border-gray-500 z-10 bg-gray-100 dark:bg-gray-700'>
       <div className='container flex items-center'>
         <Link href='/'>
           <a>
-            <figure className='flex items-center border-r border-[#e6e8ec] dark:border-[#353945] pr-8'>
-              <div className='w-8 h-8 bg-gray-200 dark:bg-gray-700 mr-3'></div>
-              <figcaption className='text-gray-700 dark:text-gray-300 text-2xl font-semibold'>
+            <figure className='flex items-center border-r border-gray-200 dark:border-gray-500 pr-8'>
+              <div className='w-8 h-8 bg-gray-300 dark:bg-gray-500 mr-3'></div>
+              <figcaption className='text-gray-600 dark:text-gray-200 text-2xl font-semibold'>
                 Lumiere
               </figcaption>
             </figure>
           </a>
         </Link>
         <nav>
-          <ul className='flex font-medium text-[#777e90] text-sm'>
+          <ul className='flex font-medium text-sm'>
             <li className='flex items-end mr-4 ml-8 cursor-pointer'>
               <p>Discover</p>
               <FiChevronDown className='ml-1 w-5 h-5' />
@@ -32,13 +32,11 @@ export default function Header() {
             type='text'
             name='search'
             placeholder='Search for anything'
-            className='py-3 rounded-lg border-2 bg-transparent pr-16 pl-5 text-sm border-[#e6e8ec] dark:border-[#353945] placeholder-[#777e90]'
+            className='py-3 rounded-lg border-2 bg-transparent pr-16 pl-5 text-sm border-gray-200 dark:border-gray-500'
           />
-          <FiSearch className='absolute right-0 mr-5 text-[#777e90] w-6 h-6' />
+          <FiSearch className='absolute right-0 mr-5 w-6 h-6' />
         </form>
-        <button className='ml-8 font-medium text-sm rounded-3xl px-5 py-3 bg-blue-600 text-dark dark:text-light'>
-          Support us
-        </button>
+        <button className='ml-8 button-primary'>Support us</button>
       </div>
     </header>
   );

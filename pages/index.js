@@ -24,9 +24,7 @@ export default function Home() {
 
       <main>
         <section className='flex'>
-          <h1 className='text-2xl font-medium'>
-            We are championing Computer Science for all
-          </h1>
+          <h1 className='mt-8'>We are championing Computer Science for all</h1>
         </section>
       </main>
 
