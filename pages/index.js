@@ -22,18 +22,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section className='max-w-5xl relative inline-block bottom-28 p-14 bg-black opacity-75 backdrop-filter backdrop-blur-sm rounded-3xl shadow-2xl'>
-        <h1 className='text-4xl leading-snug text-gray-200 font-semibold'>
-          We are championing{' '}
-          <span className='text-green-600 font-bold'>Computer Science</span> for
-          all.
-        </h1>
-        <p className='mt-8 text-gray-400 text-lg'>
-          # From computer grants to video tutorial, see what we are doing to
-          level the playing field. Because we believe that the power to code is
-          a human right.
-        </p>
-      </section>
+      <main>
+        <section className='flex'>
+          <h1 className='text-2xl font-medium'>
+            We are championing Computer Science for all
+          </h1>
+        </section>
+      </main>
 
       {mounted && (
         <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>

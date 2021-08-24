@@ -5,7 +5,7 @@ export default function PageLayout() {
   return (
     <div>
       <Header />
-      <div className='max-w-7xl mx-auto px-20'>{children}</div>
+      <div className='container'>{children}</div>
       <Footer />
     </div>
   );

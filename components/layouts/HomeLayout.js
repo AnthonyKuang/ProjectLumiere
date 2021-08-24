@@ -7,19 +7,20 @@ export default function HomeLayout({ children }) {
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('.gradient-canvas');
+    setTimeout(() => gradient.pause(), 1000); // Pause gradient after 1 second solely for development because it fries my pc while it's running
   }, []);
 
   return (
     <div>
-      <div className='relative h-96'>
-        <Header />
+      <Header />
+      <div className='relative h-64 -mt-20'>
         <canvas
           className='gradient-canvas absolute top-0'
           data-js-darken-top
           data-transition-in
         ></canvas>
       </div>
-      <div className='max-w-7xl mx-auto px-20'>{children}</div>
+      <div className='container'>{children}</div>
       <Footer />
     </div>
   );
