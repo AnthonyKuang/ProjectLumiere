@@ -17,7 +17,7 @@
     --gradient-color-4: #ffba27;
   }
 
-  .sticky-transparent-navbar {
-    @apply sticky top-0 opacity-80;
+  .sticky-navbar {
+    @apply sticky top-0;
   }
 }
