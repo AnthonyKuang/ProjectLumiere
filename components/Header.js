@@ -3,7 +3,7 @@ import { FiChevronDown, FiSearch } from 'react-icons/fi';
 
 export default function Header() {
   return (
-    <header className='h-20 flex items-center border-b border-[#e6e8ec] dark:border-[#353945] z-10 sticky top-0 bg-light dark:bg-dark opacity-80'>
+    <header className='sticky-transparent-navbar h-20 flex items-center border-b border-[#e6e8ec] dark:border-[#353945] z-10 bg-light dark:bg-dark'>
       <div className='container flex items-center'>
         <Link href='/'>
           <a>
