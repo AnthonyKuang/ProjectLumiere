@@ -13,7 +13,7 @@ export default function HomeLayout({ children }) {
   return (
     <div>
       <Header />
-      <div className='relative h-64 -mt-20'>
+      <div className='relative -mt-20 h-60'>
         <canvas
           className='gradient-canvas absolute top-0'
           data-js-darken-top

@@ -5,17 +5,21 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply overflow-hidden;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply text-gray-600 dark:text-gray-100;
+    @apply text-gray-100;
   }
 
   h1 {
-    @apply text-8xl font-bold leading-tight;
+    @apply text-7xl font-bold leading-tight;
   }
 }
 
@@ -25,11 +29,15 @@
   }
 
   .gradient-canvas {
-    @apply w-full h-full;
+    @apply w-full h-full skew-y-3 blur-md;
     --gradient-color-1: #ef008f;
     --gradient-color-2: #6ec3f4;
     --gradient-color-3: #7038ff;
     --gradient-color-4: #ffba27;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-400;
   }
 
   .sticky-navbar {
@@ -37,6 +45,6 @@
   }
 
   .button-primary {
-    @apply font-medium text-sm rounded-3xl px-5 py-3 bg-blue-600 text-gray-100;
+    @apply font-medium rounded-full bg-blue-600 text-gray-100;
   }
 }

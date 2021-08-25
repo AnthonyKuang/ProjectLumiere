@@ -2,14 +2,9 @@
 // See https://nextjs.org/docs/advanced-features/custom-app
 
 import '@styles/global.css';
-import { ThemeProvider } from 'next-themes';
 
 export default function ProjectLumiere({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
-  return getLayout(
-    <ThemeProvider attribute='class' defaultTheme='dark'>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+  return getLayout(<Component {...pageProps} />);
 }

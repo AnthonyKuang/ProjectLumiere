@@ -2,18 +2,9 @@
 // See https://nextjs.org/docs/routing/introduction#index-routes
 
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
 import HomeLayout from '@components/layouts/HomeLayout';
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
       <Head>
@@ -23,16 +14,26 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className='flex'>
-          <h1 className='mt-8'>We are championing Computer Science for all</h1>
+        <section className='mt-12 flex'>
+          <div className='max-w-2xl'>
+            <h1>
+              Championing{' '}
+              <span className='gradient-text'>Computer Science</span> for
+              everyone.
+            </h1>
+            <p className='mt-6 pr-12 text-xl leading-relaxed'>
+              We are spearheading the campaign for creating equal opportunities
+              in Tech, because Computer Science should be universal. See exactly
+              what we do to level the playing field:
+            </p>
+            <div className='mt-14'>
+              <button className='button-primary px-6 py-4 text-lg font-normal'>
+                Support us
+              </button>
+            </div>
+          </div>
         </section>
       </main>
-
-      {mounted && (
-        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          Change theme
-        </button>
-      )}
     </>
   );
 }
