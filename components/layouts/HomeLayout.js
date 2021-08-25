@@ -13,14 +13,14 @@ export default function HomeLayout({ children }) {
   return (
     <div>
       <Header />
-      <div className='relative -mt-20 h-60'>
+      <div className='relative -mt-20 h-52'>
         <canvas
           className='gradient-canvas absolute top-0'
           data-js-darken-top
           data-transition-in
         ></canvas>
       </div>
-      <div className='container'>{children}</div>
+      <>{children}</>
       <Footer />
     </div>
   );

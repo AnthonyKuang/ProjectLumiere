@@ -2,7 +2,10 @@
 // See https://nextjs.org/docs/routing/introduction#index-routes
 
 import Head from 'next/head';
+import Image from 'next/image';
+import hackPlus from '../public/images/logos/hackplus.svg';
 import HomeLayout from '@components/layouts/HomeLayout';
+import { FiChevronRight } from 'react-icons/fi';
 
 export default function Home() {
   return (
@@ -13,10 +16,10 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
+      <main className='container'>
         <section className='mt-10 flex'>
           <div className='max-w-2xl'>
-            <h1>
+            <h1 className='heading-primary'>
               Championing{' '}
               <span className='gradient-text'>Computer Science</span> for
               everyone.
@@ -26,17 +29,62 @@ export default function Home() {
               in Tech because Computer Science should be universal. See exactly
               what we do to level the playing field:
             </p>
-            <div className='mt-14 flex'>
-              <button className='mr-6 button-secondary px-5 py-3 text-sm'>
-                What we do
+            <div className='mt-12 flex'>
+              <button className='flex items-center mr-6 button-secondary pl-6 pr-5 py-3 text-sm'>
+                <p className='mr-2'>What we do</p>
+                <FiChevronRight className='w-5 h-5' />
               </button>
               <button className='button-tertiary px-5 py-3 text-sm'>
-                See our mediums
+                Our mediums
               </button>
             </div>
           </div>
         </section>
+
+        <section className='mt-44'>
+          <div className='flex justify-between'>
+            <figure className='relative w-36 h-12'>
+              <Image
+                src={hackPlus}
+                alt='Hack Plus Logo'
+                layout='fill'
+                objectFit='contain'
+              />
+            </figure>
+            <figure className='relative w-36 h-12'>
+              <div className='bg-gray-600 h-full grid place-items-center'>
+                Logo
+              </div>
+            </figure>
+            <figure className='relative w-36 h-12'>
+              <div className='bg-gray-600 h-full grid place-items-center'>
+                Logo
+              </div>
+            </figure>
+            <figure className='relative w-36 h-12'>
+              <div className='bg-gray-600 h-full grid place-items-center'>
+                Logo
+              </div>
+            </figure>
+            <figure className='relative w-36 h-12'>
+              <div className='bg-gray-600 h-full grid place-items-center'>
+                Logo
+              </div>
+            </figure>
+            <figure className='relative w-36 h-12'>
+              <div className='bg-gray-600 h-full grid place-items-center'>
+                Logo
+              </div>
+            </figure>
+          </div>
+        </section>
       </main>
+
+      <section className='mt-24 bg-gray-600'>
+        <div className='container pt-28'>
+          <h2 className='heading-secondary'>H2</h2>
+        </div>
+      </section>
     </>
   );
 }
