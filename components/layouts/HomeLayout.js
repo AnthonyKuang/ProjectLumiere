@@ -7,7 +7,7 @@ export default function HomeLayout({ children }) {
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('.gradient-canvas');
-    setTimeout(() => gradient.pause(), 1000); // Pause gradient after 1 second solely for development because it fries my pc while it's running
+    // setTimeout(() => gradient.pause(), 1000); // Pause gradient after 1 second solely for development because it fries my pc while it's running
   }, []);
 
   return (

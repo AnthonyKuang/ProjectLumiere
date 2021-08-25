@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className='mt-12 flex'>
+        <section className='mt-10 flex'>
           <div className='max-w-2xl'>
             <h1>
               Championing{' '}
@@ -26,9 +26,12 @@ export default function Home() {
               in Tech, because Computer Science should be universal. See exactly
               what we do to level the playing field:
             </p>
-            <div className='mt-14'>
-              <button className='button-primary px-6 py-4 text-lg font-normal'>
-                Support us
+            <div className='mt-14 flex'>
+              <button className='mr-6 button-secondary px-5 py-3 text-sm'>
+                What we do
+              </button>
+              <button className='button-tertiary px-5 py-3 text-sm'>
+                See our mediums
               </button>
             </div>
           </div>
