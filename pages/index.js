@@ -23,7 +23,7 @@ export default function Home() {
             </h1>
             <p className='mt-6 pr-12 text-xl leading-relaxed'>
               We are spearheading the campaign for creating equal opportunities
-              in Tech, because Computer Science should be universal. See exactly
+              in Tech because Computer Science should be universal. See exactly
               what we do to level the playing field:
             </p>
             <div className='mt-14 flex'>
