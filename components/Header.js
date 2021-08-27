@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import projectLumiere from '@public/images/logos/ProjectLumiere.svg';
 import { FiChevronDown, FiSearch } from 'react-icons/fi';
 import { Popover } from '@headlessui/react';
 
@@ -10,7 +12,14 @@ export default function Header() {
           <Link href='/'>
             <a>
               <figure className='flex items-center'>
-                <div className='w-8 h-8 bg-gray-500 mr-3'></div>
+                <div className='relative w-10 h-10 mr-2 mb-1'>
+                  <Image
+                    src={projectLumiere}
+                    alt='Project Lumiere logo'
+                    layout='fill'
+                    objectFit='contain'
+                  />
+                </div>
                 <figcaption className='text-gray-200 text-2xl font-semibold'>
                   Lumiere
                 </figcaption>
@@ -69,8 +78,8 @@ export default function Header() {
           />
           <FiSearch className='absolute right-0 mr-5 w-6 h-6' />
         </form>
-        <button className='ml-8 button-primary px-5 py-3 text-sm'>
-          Support us
+        <button className='ml-7 button-primary px-5 py-3 text-sm'>
+          Sign in
         </button>
       </div>
     </header>
