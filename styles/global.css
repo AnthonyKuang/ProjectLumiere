@@ -21,12 +21,8 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-400;
   }
 
-  .sticky-navbar {
-    @apply sticky top-0;
-  }
-
   .button-primary {
-    @apply font-medium rounded-full bg-blue-600 text-gray-100;
+    @apply font-semibold rounded-full bg-blue-600 text-gray-100;
   }
 
   .button-secondary {

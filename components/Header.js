@@ -6,7 +6,7 @@ import { Popover } from '@headlessui/react';
 
 export default function Header() {
   return (
-    <header className='sticky-navbar h-20 flex items-center opacity-90 border-b border-gray-500 z-10 bg-gray-700'>
+    <header className='sticky top-0 z-10 backdrop-filter backdrop-saturate-200 backdrop-blur-sm h-20 flex items-center border-b border-gray-500 bg-gray-700 bg-opacity-90'>
       <div className='container flex items-center'>
         <div className='border-r border-gray-500 pr-8'>
           <Link href='/'>
@@ -78,7 +78,7 @@ export default function Header() {
           />
           <FiSearch className='absolute right-0 mr-5 w-6 h-6' />
         </form>
-        <button className='ml-7 button-primary px-5 py-3 text-sm'>
+        <button className='ml-7 text-sm button-primary px-5 py-3'>
           Sign in
         </button>
       </div>
