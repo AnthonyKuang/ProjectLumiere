@@ -22,7 +22,7 @@
   }
 
   .button-primary {
-    @apply font-semibold rounded-full bg-blue-600 text-gray-100;
+    @apply font-semibold rounded-full bg-blue-550 text-gray-100;
   }
 
   .button-secondary {
