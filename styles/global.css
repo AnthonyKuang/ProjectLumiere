@@ -34,7 +34,7 @@
   }
 
   .heading-primary {
-    @apply text-gray-100 text-7xl font-bold leading-tight;
+    @apply text-gray-100 text-6xl font-bold leading-tight;
   }
 
   .heading-secondary {

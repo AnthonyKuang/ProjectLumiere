@@ -34,18 +34,18 @@ export default function Home() {
 
       <main className='container'>
         <section className='mt-12 flex'>
-          <div className='max-w-2xl'>
+          <div className='max-w-xl'>
             <h1 className='heading-primary'>
               Jumpstart a{' '}
               <span className='gradient-text'>Computer Science</span> career
               now.
             </h1>
-            <p className='mt-6 pr-12 text-xl leading-relaxed'>
+            <p className='mt-8 pr-12 text-lg leading-relaxed'>
               We are a media publication platform that accelerates students who
-              create CompSci content. We make it easy for our talented creators
-              to gain an audience and build a name in the industry.
+              create CompSci content. We make it easy for our creators to gain
+              an audience and build a name in the industry.
             </p>
-            <div className='mt-14 flex'>
+            <div className='mt-20 flex'>
               <button className='flex items-center mr-6 button-secondary pl-6 pr-5 py-3 text-sm'>
                 <p className='mr-2'>What we do</p>
                 <FiChevronDown className='w-5 h-5' />
