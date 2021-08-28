@@ -33,7 +33,7 @@ module.exports = {
       sky: colors.sky,
       blue: {
         ...colors.blue,
-        550: '#376fed',
+        550: '#3972f1',
       },
       indigo: colors.indigo,
       violet: colors.violet,
