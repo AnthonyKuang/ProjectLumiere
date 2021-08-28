@@ -33,7 +33,7 @@ export default function Home() {
       </div>
 
       <main className='container'>
-        <section className='mt-8 flex'>
+        <section className='mt-12 flex'>
           <div className='max-w-2xl'>
             <h1 className='heading-primary'>
               Jumpstart a{' '}
@@ -45,7 +45,7 @@ export default function Home() {
               create CompSci content. We make it easy for our talented creators
               to gain an audience and build a name in the industry.
             </p>
-            <div className='mt-16 flex'>
+            <div className='mt-14 flex'>
               <button className='flex items-center mr-6 button-secondary pl-6 pr-5 py-3 text-sm'>
                 <p className='mr-2'>What we do</p>
                 <FiChevronDown className='w-5 h-5' />
