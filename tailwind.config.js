@@ -46,6 +46,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
       },
+      height: {
+        108: '420px',
+      },
     },
   },
   variants: {

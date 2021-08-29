@@ -10,7 +10,7 @@
   }
 
   .gradient-canvas {
-    @apply w-full h-full skew-y-3 blur-md;
+    @apply w-full h-full skew-y-6 blur-md opacity-50;
     --gradient-color-1: #ef008f;
     --gradient-color-2: #6ec3f4;
     --gradient-color-3: #7038ff;

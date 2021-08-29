@@ -6,4 +6,7 @@ module.exports = {
   experimental: {
     esmExternals: true,
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 };

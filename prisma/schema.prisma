@@ -10,15 +10,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  Int?
-}
-
 model Account {
   id                 Int       @id @default(autoincrement())
   compoundId         String    @unique @map(name: "compound_id")
@@ -57,8 +48,7 @@ model User {
   emailVerified DateTime? @map(name: "email_verified")
   image         String?
   createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
 
   @@map(name: "users")
 }

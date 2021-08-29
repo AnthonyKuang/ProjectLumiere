@@ -3,8 +3,12 @@ import Image from 'next/image';
 import projectLumiere from '@public/images/logos/ProjectLumiere.svg';
 import { FiChevronDown, FiSearch } from 'react-icons/fi';
 import { Popover } from '@headlessui/react';
+import { useSession } from 'next-auth/client';
+import Avatar from '@components/Avatar';
 
 export default function Header() {
+  const [session, loading] = useSession();
+
   return (
     <header className='sticky top-0 z-10 backdrop-filter backdrop-saturate-200 backdrop-blur-sm h-20 flex items-center border-b border-gray-500 bg-gray-700 bg-opacity-90'>
       <div className='container flex items-center'>
@@ -69,7 +73,7 @@ export default function Header() {
             </Popover>
           </Popover.Group>
         </nav>
-        <form className='flex relative items-center ml-auto'>
+        <form className='flex relative items-center ml-auto mr-7'>
           <input
             type='text'
             name='search'
@@ -78,9 +82,16 @@ export default function Header() {
           />
           <FiSearch className='absolute right-0 mr-5 w-6 h-6' />
         </form>
-        <button className='ml-7 text-sm button-primary px-5 py-3'>
-          Sign in
-        </button>
+        {session ? (
+          <Avatar
+            profileImageSrc={session.user.image}
+            profileName={session.user.name}
+          />
+        ) : (
+          <Link href='/api/auth/signin'>
+            <a className='text-sm button-primary px-5 py-3'>Sign in</a>
+          </Link>
+        )}
       </div>
     </header>
   );

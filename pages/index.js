@@ -7,13 +7,13 @@ import { useEffect } from 'react';
 import hackPlus from '@public/images/logos/HackPlus.svg';
 import { Gradient } from '@lib/gradient';
 import Layout from '@components/layouts/Layout';
-import { FiChevronDown } from 'react-icons/fi';
+import { FiChevronRight } from 'react-icons/fi';
 
 export default function Home() {
   useEffect(() => {
     const gradient = new Gradient();
     gradient.initGradient('.gradient-canvas');
-    setTimeout(() => gradient.pause(), 1000); // Pause gradient after 1 second solely for development because it fries my pc while it's running
+    // setTimeout(() => gradient.pause(), 1000); // Pause gradient after 1 second solely for development because it fries my pc while it's running
   }, []);
 
   return (
@@ -24,7 +24,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='relative -mt-20 h-52'>
+      <div className='relative -mt-44 h-108'>
         <canvas
           className='gradient-canvas absolute top-0'
           data-js-darken-top
@@ -32,23 +32,23 @@ export default function Home() {
         ></canvas>
       </div>
 
-      <main className='container'>
+      <main className='container -mt-32 z-10'>
         <section className='mt-12 flex'>
           <div className='max-w-xl'>
             <h1 className='heading-primary'>
-              Jumpstart a{' '}
+              Jumpstart your{' '}
               <span className='gradient-text'>Computer Science</span> career
               now.
             </h1>
             <p className='mt-8 pr-12 text-lg leading-relaxed'>
-              We are a media publication platform that accelerates students who
-              create CompSci content. We make it easy for our creators to gain
+              Lumiere is a media publication platform that accelerates students
+              who create CompSci content. We make it easy for creators to gain
               an audience and build a name in the industry.
             </p>
             <div className='mt-20 flex'>
               <button className='flex items-center mr-6 button-secondary pl-6 pr-5 py-3 text-sm'>
-                <p className='mr-2'>What we do</p>
-                <FiChevronDown className='w-5 h-5' />
+                <p className='mr-2'>Get started</p>
+                <FiChevronRight className='w-5 h-5' />
               </button>
               <button className='button-tertiary px-5 py-3 text-sm'>
                 Support us
