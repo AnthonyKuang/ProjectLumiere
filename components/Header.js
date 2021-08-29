@@ -37,12 +37,12 @@ export default function Header() {
               {({ open }) => (
                 <>
                   <Popover.Button>
-                    <div className='flex'>
-                      <p>Discover</p>
+                    <div className='flex hover:text-gray-300 transition-colors'>
+                      <p className>Discover</p>
                       <FiChevronDown
                         className={`${
                           open ? 'transform rotate-180' : ''
-                        } ml-1 w-5 h-5`}
+                        } ml-1 w-5 h-5 transition-transform`}
                       />
                     </div>
                   </Popover.Button>
@@ -56,12 +56,12 @@ export default function Header() {
               {({ open }) => (
                 <>
                   <Popover.Button>
-                    <div className='flex'>
+                    <div className='flex hover:text-gray-300 transition-colors'>
                       <p>Media</p>
                       <FiChevronDown
                         className={`${
                           open ? 'transform rotate-180' : ''
-                        } ml-1 w-5 h-5`}
+                        } ml-1 w-5 h-5 transition-transform`}
                       />
                     </div>
                   </Popover.Button>
