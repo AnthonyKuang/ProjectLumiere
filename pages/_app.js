@@ -2,9 +2,19 @@
 // See https://nextjs.org/docs/advanced-features/custom-app
 
 import '@styles/global.css';
+import { Provider } from 'next-auth/client';
+import Auth from '@components/Auth';
 
 export default function ProjectLumiere({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <Provider session={pageProps.session}>
+      {Component.requireAuth ? (
+        <Auth>{getLayout(<Component {...pageProps} />)}</Auth>
+      ) : (
+        getLayout(<Component {...pageProps} />)
+      )}
+    </Provider>
+  );
 }

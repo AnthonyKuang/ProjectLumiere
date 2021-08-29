@@ -7,10 +7,10 @@ import { useSession } from 'next-auth/client';
 import Avatar from '@components/Avatar';
 
 export default function Header() {
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
-    <header className='sticky top-0 z-10 backdrop-filter backdrop-saturate-200 backdrop-blur-sm h-20 flex items-center border-b border-gray-500 bg-gray-700 bg-opacity-90'>
+    <header className='sticky top-0 z-50 backdrop-filter backdrop-saturate-200 backdrop-blur-sm h-20 flex items-center border-b border-gray-500 bg-gray-700 bg-opacity-90'>
       <div className='container flex items-center'>
         <div className='border-r border-gray-500 pr-8'>
           <Link href='/'>
@@ -47,7 +47,11 @@ export default function Header() {
                     </div>
                   </Popover.Button>
                   <Popover.Panel className='absolute -bottom-5 left-0 bg-gray-700 opacity-80 w-full z-10'>
-                    <div className='container'>This is Discover</div>
+                    <div className='container'>
+                      <Link href='/settings'>
+                        <a>Go to settings</a>
+                      </Link>
+                    </div>
                   </Popover.Panel>
                 </>
               )}

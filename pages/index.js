@@ -32,9 +32,9 @@ export default function Home() {
         ></canvas>
       </div>
 
-      <main className='container -mt-32 z-10'>
+      <main className='container -mt-32'>
         <section className='mt-12 flex'>
-          <div className='max-w-xl'>
+          <div className='max-w-xl z-10'>
             <h1 className='heading-primary'>
               Jumpstart your{' '}
               <span className='gradient-text'>Computer Science</span> career
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='mt-44'>
+        <section className='mt-48'>
           <div className='flex justify-between'>
             <figure className='relative w-36 h-12'>
               <Image
@@ -66,11 +66,6 @@ export default function Home() {
                 layout='fill'
                 objectFit='contain'
               />
-            </figure>
-            <figure className='relative w-36 h-12'>
-              <div className='bg-gray-600 h-full grid place-items-center'>
-                Logo
-              </div>
             </figure>
             <figure className='relative w-36 h-12'>
               <div className='bg-gray-600 h-full grid place-items-center'>
