@@ -3,12 +3,13 @@ import Head from 'next/head';
 import { useSession, signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useLocalStorage } from 'react-use';
+import UsernameForm from '@components/ui/UsernameForm';
 
 export default function Settings() {
   // eslint-disable-next-line no-unused-vars
   const [_, setValue] = useLocalStorage('refresh', false);
   const router = useRouter();
-  const { status } = useSession({
+  const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
       signIn();
@@ -47,22 +48,36 @@ export default function Settings() {
       </Head>
       <main className="container">
         <h1 className="heading-primary">Settings</h1>
-        <section className="mt-5">
-          <h2 className="text-xl font-bold">Delete your account</h2>
-          <p>
-            You can choose to delete your account at any time. Do note that
-            doing so may result in all your previously-created posts being
-            permanently deleted. If you&#39;re sure, you may delete your account
-            by clicking on the button below.
-          </p>
-          <button
-            type="button"
-            className="button-tertiary px-5 py-3 lg:py-2.5 mt-5 transition-colors border-red-500 text-red-500 hover:text-red-400"
-            onClick={() => deleteAccount()}
-          >
-            Delete my account
-          </button>
-        </section>
+        <div className="divide-y divide-gray-400">
+          <section className="py-5">
+            <h2 className="text-xl font-bold">Change your username</h2>
+            <p className="mb-5">
+              You can change your username, but only to a username that is not
+              currently being used by another user. To change your username, use
+              the text field below and click on the button.
+            </p>
+            <UsernameForm
+              initialUsername={session.user.username.substr(1)}
+              redirectUrl="/me/settings"
+            />
+          </section>
+          <section className="py-5">
+            <h2 className="text-xl font-bold">Delete your account</h2>
+            <p>
+              You can choose to delete your account at any time. Do note that
+              doing so may result in all your previously-created posts being
+              permanently deleted. If you&#39;re sure, you may delete your
+              account by clicking on the button below.
+            </p>
+            <button
+              type="button"
+              className="button-tertiary px-5 py-3 lg:py-2.5 mt-5 transition-colors border-red-500 text-red-500 hover:text-red-400"
+              onClick={() => deleteAccount()}
+            >
+              Delete my account
+            </button>
+          </section>
+        </div>
       </main>
     </>
   );
