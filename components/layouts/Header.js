@@ -41,7 +41,7 @@ export default function Header({
           <div className="flex items-center">
             <Link href="/">
               <a>
-                <figure className="relative w-10 h-10 mb-1 lg:w-9 lg:h-9">
+                <figure className="relative mb-1 w-10 h-10 lg:w-9 lg:h-9">
                   <Image
                     src={projectLumiere}
                     alt="Project Lumiere logo"
@@ -75,7 +75,7 @@ export default function Header({
               <input
                 type="text"
                 value={title}
-                className="px-4 py-2 ml-3 text-xl text-gray-300 transition-colors bg-transparent rounded-lg cursor-not-allowed w-96 hover:bg-gray-800"
+                className="px-4 py-2 ml-3 w-96 text-xl text-gray-300 bg-transparent rounded-lg transition-colors cursor-not-allowed hover:bg-gray-800"
                 disabled
               />
             )}
@@ -98,7 +98,7 @@ export default function Header({
         </header>
         <button
           type="button"
-          className="absolute top-0 z-50 grid w-8 h-6 transition-all -translate-x-1/2 -translate-y-4 bg-gray-600 rounded-b-md hover:rounded-b-full place-items-center left-1/2 hover:translate-y-0"
+          className="grid absolute top-0 left-1/2 z-50 place-items-center w-8 h-6 bg-gray-600 rounded-b-md transition-all -translate-x-1/2 -translate-y-4 hover:rounded-b-full hover:translate-y-0"
           onClick={() => setCollapsed(!collapsed)}
         >
           <FiChevronUp
@@ -112,13 +112,13 @@ export default function Header({
   }
   if (pageType === 'home') {
     return (
-      <header className="sticky top-0 z-50 flex items-center bg-gray-900 border-b border-gray-700 backdrop-filter backdrop-saturate-200 backdrop-blur-sm h-18 lg:h-16 bg-opacity-90">
+      <header className="flex sticky top-0 z-50 items-center bg-gray-900 bg-opacity-90 border-b border-gray-700 backdrop-filter backdrop-blur-sm backdrop-saturate-200 h-18 lg:h-16">
         <div className="container flex items-center">
           <div className="pr-8 border-r border-gray-600 lg:pr-7 md:border-0 md:pr-0">
             <Link href="/">
               <a>
                 <figure className="flex items-center group">
-                  <div className="relative w-10 lg:w-8 h-10 lg:h-8 mr-1.5 mb-0.5">
+                  <div className="relative mr-1.5 mb-0.5 w-10 h-10 lg:w-8 lg:h-8">
                     <Image
                       src={projectLumiere}
                       alt="Project Lumiere logo"
@@ -143,12 +143,14 @@ export default function Header({
                         <p className="font-medium lg:text-xs">Media</p>
                         <FiChevronDown
                           className={`${
-                            open ? 'transform rotate-180' : ''
-                          } ml-1 w-5 lg:w-4 h-5 lg:h-4 transition-transform`}
+                            open
+                              ? 'transform rotate-180'
+                              : 'ml-1 w-5 h-5 transition-transform'
+                          } lg:w-4 lg:h-4`}
                         />
                       </div>
                     </Popover.Button>
-                    <Popover.Panel className="absolute -bottom-5.5 left-0 bg-gray-900 border-b border-gray-700 bg-opacity-90 w-full z-10">
+                    <Popover.Panel className="absolute left-0 z-10 w-full bg-gray-900 bg-opacity-90 border-b border-gray-700 -bottom-5.5">
                       <div className="container">
                         <Link href="/press">
                           <a className="block">Lumiere Press</a>
@@ -166,12 +168,14 @@ export default function Header({
                         <p className="font-medium lg:text-xs">Discover</p>
                         <FiChevronDown
                           className={`${
-                            open ? 'transform rotate-180' : ''
-                          } ml-1 w-5 lg:w-4 h-5 lg:h-4 transition-transform`}
+                            open
+                              ? 'transform rotate-180'
+                              : 'ml-1 w-5 h-5 transition-transform'
+                          } lg:w-4 lg:h-4`}
                         />
                       </div>
                     </Popover.Button>
-                    <Popover.Panel className="absolute -bottom-5.5 left-0 bg-gray-900 border-b border-gray-700 bg-opacity-90 w-full z-10">
+                    <Popover.Panel className="absolute left-0 z-10 w-full bg-gray-900 bg-opacity-90 border-b border-gray-700 -bottom-5.5">
                       <div className="container beta">This is Discover</div>
                     </Popover.Panel>
                   </>
@@ -179,7 +183,7 @@ export default function Header({
               </Popover>
             </Popover.Group>
           </nav>
-          <form className="relative flex items-center ml-auto mr-7 lg:mr-6 md:hidden beta">
+          <form className="flex relative items-center mr-7 ml-auto lg:mr-6 md:hidden beta">
             <input
               type="text"
               name="search"
@@ -188,14 +192,14 @@ export default function Header({
                 session ? 'pr-18 lg:pr-14' : 'pr-9 lg:pr-8'
               } pl-4 text-sm border-gray-700 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 hover:border-gray-600 placeholder-gray-500`}
             />
-            <FiSearch className="absolute right-0 w-6 h-6 mr-4 text-gray-600" />
+            <FiSearch className="absolute right-0 mr-4 w-6 h-6 text-gray-600" />
           </form>
           {session ? (
             <Avatar renderPosition="container" />
           ) : (
             <button
               type="button"
-              className="text-sm lg:text-xs button-primary px-5 lg:px-4 py-3 lg:py-2.5 md:hidden"
+              className="px-5 py-3 text-sm lg:text-xs button-primary lg:px-4 lg:py-2.5 md:hidden"
               onClick={() => signIn()}
             >
               Sign in
@@ -204,22 +208,22 @@ export default function Header({
 
           <button
             type="button"
-            className="hidden w-12 h-8 ml-auto transition bg-gray-500 md:grid place-items-center rounded-2xl hover:bg-gray-400 opacity-80 hover:opacity-100"
+            className="hidden place-items-center ml-auto w-12 h-8 bg-gray-500 rounded-2xl opacity-80 transition md:grid hover:bg-gray-400 hover:opacity-100"
             onClick={() => setIsOpen(true)}
           >
-            <IoReorderThreeOutline className="w-6 text-gray-100 h-7" />
+            <IoReorderThreeOutline className="w-6 h-7 text-gray-100" />
           </button>
         </div>
 
         <Dialog
           open={isOpen}
           onClose={() => setIsOpen(false)}
-          className="fixed inset-0 z-10 overflow-y-scroll"
+          className="overflow-y-scroll fixed inset-0 z-10"
         >
-          <div className="flex items-center justify-center min-h-screen">
+          <div className="flex justify-center items-center min-h-screen">
             <Dialog.Overlay className="fixed inset-0 bg-gray-900 opacity-95" />
 
-            <div className="relative w-screen h-screen pt-16 mx-auto rounded">
+            <div className="relative pt-16 mx-auto w-screen h-screen rounded">
               <button type="button" onClick={() => setIsOpen(false)}>
                 X
               </button>
@@ -231,8 +235,8 @@ export default function Header({
     );
   }
   return (
-    <header className="sticky top-0 z-50 flex items-center mb-16 bg-gray-900 border-b border-gray-700 h-18 lg:h-16">
-      <div className="absolute z-0 w-full h-full -mt-60 lg:-mt-64">
+    <header className="flex sticky top-0 z-50 items-center mb-16 bg-gray-900 border-b border-gray-700 h-18 lg:h-16">
+      <div className="absolute z-0 -mt-60 w-full h-full lg:-mt-64">
         <div className="relative h-48">
           <canvas
             className="absolute top-0 header-gradient-canvas"
@@ -241,12 +245,12 @@ export default function Header({
           />
         </div>
       </div>
-      <div className="container z-50 flex items-center">
+      <div className="container flex z-50 items-center">
         <div className="pr-8 border-r border-gray-600 lg:pr-7 md:border-0 md:pr-0">
           <Link href="/">
             <a>
               <figure className="flex items-center group">
-                <div className="relative w-10 lg:w-8 h-10 lg:h-8 mr-1.5 mb-0.5">
+                <div className="relative mr-1.5 mb-0.5 w-10 h-10 lg:w-8 lg:h-8">
                   <Image
                     src={projectLumiere}
                     alt="Project Lumiere logo"
@@ -271,12 +275,14 @@ export default function Header({
                       <p className="font-medium lg:text-xs">Media</p>
                       <FiChevronDown
                         className={`${
-                          open ? 'transform rotate-180' : ''
-                        } ml-1 w-5 lg:w-4 h-5 lg:h-4 transition-transform`}
+                          open
+                            ? 'transform rotate-180'
+                            : 'ml-1 w-5 h-5 transition-transform'
+                        } lg:w-4 lg:h-4`}
                       />
                     </div>
                   </Popover.Button>
-                  <Popover.Panel className="absolute -bottom-5.5 left-0 bg-gray-900 border-b border-gray-700 bg-opacity-90 w-full z-10">
+                  <Popover.Panel className="absolute left-0 z-10 w-full bg-gray-900 bg-opacity-90 border-b border-gray-700 -bottom-5.5">
                     <div className="container">
                       <Link href="/press">
                         <a className="block" onClick={() => setIsOpen(false)}>
@@ -296,12 +302,14 @@ export default function Header({
                       <p className="font-medium lg:text-xs">Discover</p>
                       <FiChevronDown
                         className={`${
-                          open ? 'transform rotate-180' : ''
-                        } ml-1 w-5 lg:w-4 h-5 lg:h-4 transition-transform`}
+                          open
+                            ? 'transform rotate-180'
+                            : 'ml-1 w-5 h-5 transition-transform'
+                        } lg:w-4 lg:h-4`}
                       />
                     </div>
                   </Popover.Button>
-                  <Popover.Panel className="absolute -bottom-5.5 left-0 bg-gray-900 border-b border-gray-700 bg-opacity-90 w-full z-10">
+                  <Popover.Panel className="absolute left-0 z-10 w-full bg-gray-900 bg-opacity-90 border-b border-gray-700 -bottom-5.5">
                     <div className="container beta">This is Discover</div>
                   </Popover.Panel>
                 </>
@@ -309,23 +317,23 @@ export default function Header({
             </Popover>
           </Popover.Group>
         </nav>
-        <form className="relative flex items-center ml-auto mr-7 lg:mr-6 md:hidden beta">
+        <form className="flex relative items-center mr-7 ml-auto lg:mr-6 md:hidden beta">
           <input
             type="text"
             name="search"
             placeholder="Search for anything"
-            className={`py-3 lg:py-2.5 rounded-lg border-2 bg-transparent ${
+            className={`text-field ${
               session ? 'pr-18 lg:pr-14' : 'pr-9 lg:pr-8'
-            } pl-4 text-sm border-gray-700 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 hover:border-gray-600 placeholder-gray-500`}
+            }`}
           />
-          <FiSearch className="absolute right-0 w-6 h-6 mr-4 text-gray-600" />
+          <FiSearch className="absolute right-0 mr-4 w-6 h-6 text-gray-600" />
         </form>
         {session ? (
           <Avatar renderPosition="container" />
         ) : (
           <button
             type="button"
-            className="text-sm lg:text-xs button-primary px-5 lg:px-4 py-3 lg:py-2.5 md:hidden"
+            className="px-5 py-3 text-sm lg:text-xs button-primary lg:px-4 lg:py-2.5 md:hidden"
             onClick={() => signIn()}
           >
             Sign in
@@ -334,22 +342,22 @@ export default function Header({
 
         <button
           type="button"
-          className="hidden w-12 h-8 ml-auto transition bg-gray-500 md:grid place-items-center rounded-2xl hover:bg-gray-400 opacity-80 hover:opacity-100"
+          className="hidden place-items-center ml-auto w-12 h-8 bg-gray-500 rounded-2xl opacity-80 transition md:grid hover:bg-gray-400 hover:opacity-100"
           onClick={() => setIsOpen(true)}
         >
-          <IoReorderThreeOutline className="w-6 text-gray-100 h-7" />
+          <IoReorderThreeOutline className="w-6 h-7 text-gray-100" />
         </button>
       </div>
 
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="fixed inset-0 z-10 overflow-y-scroll"
+        className="overflow-y-scroll fixed inset-0 z-10"
       >
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex justify-center items-center min-h-screen">
           <Dialog.Overlay className="fixed inset-0 bg-gray-900 opacity-95" />
 
-          <div className="relative w-screen h-screen pt-16 mx-auto rounded">
+          <div className="relative pt-16 mx-auto w-screen h-screen rounded">
             <button type="button" onClick={() => setIsOpen(false)}>
               X
             </button>
