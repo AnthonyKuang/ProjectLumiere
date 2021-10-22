@@ -22,7 +22,7 @@ export default function Username() {
       <Head>
         <title>Username | Lumiere</title>
       </Head>
-      <div className="grid h-screen text-center place-items-center">
+      <div className="grid place-items-center h-screen text-center">
         <main>
           <figure className="flex justify-center">
             <Image
