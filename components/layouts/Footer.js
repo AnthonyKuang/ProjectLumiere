@@ -333,15 +333,23 @@ export default function Footer() {
             <p className="text-xs lg:text-2xs">
               &copy; 2021 Project Lumiere 501(c)(3). All rights reserved.
             </p>
-            <iframe
-              title="Instatus"
-              src="https://projectlumiere.instatus.com/embed-status/dark-sm"
-              width="230"
-              height="41"
-              frameBorder="0"
-              scrolling="no"
-              className="scale-90 dark:rounded-lg"
-            />
+            <div className="flex flex-row space-x-0">
+              <Image
+                src="/images/powered-by-vercel.svg"
+                alt="Powered by Vercel"
+                height="37"
+                width="178"
+              />
+              <iframe
+                title="Instatus"
+                src="https://projectlumiere.instatus.com/embed-status/dark-sm"
+                width="230"
+                height="41"
+                frameBorder="0"
+                scrolling="no"
+                className="scale-90 dark:rounded-lg"
+              />
+            </div>
             <div className="flex">
               <a
                 href="https://www.linkedin.com/company/project-lumiere"
