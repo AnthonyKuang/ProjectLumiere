@@ -334,12 +334,18 @@ export default function Footer() {
               &copy; 2021 Project Lumiere 501(c)(3). All rights reserved.
             </p>
             <div className="flex flex-row space-x-0">
-              <Image
-                src="/images/powered-by-vercel.svg"
-                alt="Powered by Vercel"
-                height="37"
-                width="178"
-              />
+              <a
+                href="https://vercel.com/?utm_source=lumiere&utm_campaign=oss"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <Image
+                  src="/images/powered-by-vercel.svg"
+                  alt="Powered by Vercel"
+                  height="37"
+                  width="178"
+                />
+              </a>
               <iframe
                 title="Instatus"
                 src="https://projectlumiere.instatus.com/embed-status/dark-sm"
