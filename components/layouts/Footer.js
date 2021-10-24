@@ -333,15 +333,30 @@ export default function Footer() {
             <p className="text-xs lg:text-2xs">
               &copy; 2021 Project Lumiere 501(c)(3). All rights reserved.
             </p>
-            <iframe
-              title="Instatus"
-              src="https://projectlumiere.instatus.com/embed-status/dark-sm"
-              width="230"
-              height="41"
-              frameBorder="0"
-              scrolling="no"
-              className="scale-90 dark:rounded-lg"
-            />
+            <div className="flex flex-row items-center space-x-2">
+              <a
+                href="https://vercel.com/?utm_source=lumiere&utm_campaign=oss"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex justify-center"
+              >
+                <Image
+                  src="/images/powered-by-vercel.svg"
+                  alt="Powered by Vercel"
+                  width="178"
+                  height="37"
+                />
+              </a>
+              <iframe
+                title="Instatus"
+                src="https://projectlumiere.instatus.com/embed-status/dark-sm"
+                width="230"
+                height="41"
+                frameBorder="0"
+                scrolling="no"
+                className="scale-90 dark:rounded-lg"
+              />
+            </div>
             <div className="flex">
               <a
                 href="https://www.linkedin.com/company/project-lumiere"
@@ -377,15 +392,30 @@ export default function Footer() {
             </figcaption>
           </figure>
 
-          <iframe
-            title="Instatus"
-            src="https://projectlumiere.instatus.com/embed-status/dark-sm"
-            width="230"
-            height="41"
-            frameBorder="0"
-            scrolling="no"
-            className="mx-auto mt-2 scale-75 dark:rounded-lg"
-          />
+          <div className="flex flex-col items-center mt-12 space-y-2">
+            <a
+              href="https://vercel.com/?utm_source=lumiere&utm_campaign=oss"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex justify-center w-max h-max"
+            >
+              <Image
+                src="/images/powered-by-vercel.svg"
+                alt="Powered by Vercel"
+                width="178"
+                height="37"
+              />
+            </a>
+            <iframe
+              title="Instatus"
+              src="https://projectlumiere.instatus.com/embed-status/dark-sm"
+              width="230"
+              height="41"
+              frameBorder="0"
+              scrolling="no"
+              className="mx-auto mt-2 scale-75 dark:rounded-lg"
+            />
+          </div>
 
           <div className="flex justify-center mt-8">
             <a
