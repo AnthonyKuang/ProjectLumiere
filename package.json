@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/basic-setup": "^0.19.0",
+    "@codemirror/lang-markdown": "^0.19.2",
+    "@codemirror/theme-one-dark": "^0.19.0",
     "@headlessui/react": "^1.4.1",
     "@jsdevtools/rehype-toc": "^3.0.2",
     "@mapbox/rehype-prism": "^0.8.0",
@@ -19,6 +22,7 @@
     "@uiw/react-codepen": "^1.0.2",
     "@uiw/react-codesandbox": "^1.1.0",
     "@uiw/react-stackblitz": "^1.0.4",
+    "ahooks": "^2.10.11",
     "date-fns": "^2.25.0",
     "next": "11.1.2",
     "next-auth": "^4.0.0-beta.2",
@@ -40,7 +44,10 @@
     "remark-gfm": "^1.0.0",
     "remark-hint": "^1.0.10",
     "remark-unwrap-images": "^2.1.0",
-    "xdm": "^1.12.2"
+    "rodemirror": "^1.6.5",
+    "vfile": "^5.1.1",
+    "vfile-message": "^3.0.2",
+    "xdm": "^3.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
