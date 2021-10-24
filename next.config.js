@@ -37,4 +37,7 @@ module.exports = {
   experimental: {
     esmExternals: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };

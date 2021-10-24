@@ -21,7 +21,4 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  }
 }
