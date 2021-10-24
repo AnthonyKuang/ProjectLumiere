@@ -41,7 +41,7 @@
     "rehype-slug": "^4.0.1",
     "rehype-wrap": "^1.0.10",
     "remark-emoji": "^2.2.0",
-    "remark-gfm": "^1.0.0",
+    "remark-gfm": "^3.0.0",
     "remark-hint": "^1.0.10",
     "remark-unwrap-images": "^2.1.0",
     "rodemirror": "^1.6.5",
