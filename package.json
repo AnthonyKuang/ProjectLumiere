@@ -58,7 +58,7 @@
     "vfile-message": "^3.0.2",
     "vfile-reporter": "^7.0.2",
     "vfile-statistics": "^2.0.0",
-    "xdm": "^3.0.1"
+    "xdm": "^3.2.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
