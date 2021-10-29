@@ -54,7 +54,7 @@
     "remark-mdx-code-meta": "^1.0.0",
     "remark-unwrap-images": "^3.0.0",
     "rodemirror": "^1.6.5",
-    "vfile": "^5.1.1",
+    "vfile": "^5.2.0",
     "vfile-message": "^3.0.2",
     "vfile-reporter": "^7.0.2",
     "vfile-statistics": "^2.0.0",
