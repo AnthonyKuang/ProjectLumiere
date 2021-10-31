@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Confetti from 'react-confetti';
+import Codepen from '@components/editor/MDXComponents/Codepen';
+import CodeSandbox from '@components/editor/MDXComponents/CodeSandbox';
 
 const a = (props) => {
   const { href, children } = props;
@@ -70,6 +72,8 @@ const ConfettiComponent = () => {
 const MDXComponents = {
   a,
   img,
+  Codepen,
+  CodeSandbox,
   ConfettiComponent,
 };
 
