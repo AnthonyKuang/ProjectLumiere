@@ -21,24 +21,24 @@ export default function Publications({ publications }) {
         <title>My Publications</title>
       </Head>
       <h1 className="mb-5 heading-primary">Your Publications</h1>
-        {publications.length === 0 ? (
-          <div className="flex flex-col items-center justify-center w-full h-full p-5 border border-gray-700 rounded-xl">
-            <FaRegFile className="w-8 h-8 mb-5 text-gray-500" />
-            <h2 className="text-xl font-bold">No publications were found.</h2>
-            <p>
-              Go ahead and create a publication! Public publications can be found here after
-              you publish a draft.
-            </p>
-          </div>
-        ) : (
-          publications.map((publication) => (
-            <Publication
-              post={publication}
-              key={publication.id}
-              visibility="private"
-            />
-          ))
-        )}
+      {publications.length === 0 ? (
+        <div className="flex flex-col items-center justify-center w-full h-full p-5 border border-gray-700 rounded-xl">
+          <FaRegFile className="w-8 h-8 mb-5 text-gray-500" />
+          <h2 className="text-xl font-bold">No publications were found.</h2>
+          <p>
+            Go ahead and create a publication! Public publications can be found
+            here after you publish a draft.
+          </p>
+        </div>
+      ) : (
+        publications.map((publication) => (
+          <Publication
+            post={publication}
+            key={publication.id}
+            visibility="private"
+          />
+        ))
+      )}
     </>
   );
 }
