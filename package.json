@@ -26,7 +26,7 @@
     "next-auth": "^4.0.0-beta.2",
     "next-plugin-preact": "^3.0.6",
     "next-themes": "0.0.15",
-    "nextjs-progressbar": "0.0.11",
+    "nextjs-progressbar": "0.0.13",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
     "react": "npm:@preact/compat@^17.0.3",
