@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { getTimeAndDate } from '@lib/utilities/formatDate';
+import Link from 'next/link';
+import { FaPen, FaClock } from 'react-icons/fa';
 
 export default function Publication({ post, visibility }) {
   const router = useRouter();
@@ -38,28 +40,32 @@ export default function Publication({ post, visibility }) {
   };
 
   return (
-    <>
-      <button
-        type="button"
-        className="p-5 border border-gray-300 cursor-pointer dark:border-gray-700 rounded-xl"
-        onClick={() =>
-          router.push(`/press/${post.author.username}/${post.slug}`)
-        }
-      >
-        <h2 className="text-xl font-bold">{post.title}</h2>
-        <div className="flex items-center my-2 space-x-2">
-          <Image
-            src={post.author.image}
-            alt={`Image of ${post.author.username}`}
-            className="rounded-full"
-            width={40}
-            height={40}
-          />
-          <p>{post.author.username}</p>
+    <article>
+      <Link href={`/press/${post.author.username}/${post.slug}`} passHref>
+        <div className="p-5 transition-colors border border-gray-300 cursor-pointer dark:border-gray-700 rounded-xl hover:border-gray-400 dark:hover:border-gray-400">
+          <h2 className="text-2xl font-bold">{post.title}</h2>
+          <div className="flex items-center my-2 space-x-2">
+            <Image
+              src={post.author.image}
+              alt={`Image of ${post.author.username}`}
+              className="rounded-full"
+              width={40}
+              height={40}
+            />
+            <p>{post.author.username}</p>
+          </div>
+          <span className="text-base text-gray-500">
+            <p className="flex items-center">
+              <FaPen className="inline mr-2" />
+              Created on {getTimeAndDate(post.createdAt)}
+            </p>
+            <p className="flex items-center">
+              <FaClock className="inline mr-2" />
+              Updated on {getTimeAndDate(post.updatedAt)}
+            </p>
+          </span>
         </div>
-        <p>Created on {getTimeAndDate(post.createdAt)}</p>
-        <p>Updated on {getTimeAndDate(post.updatedAt)}</p>
-      </button>
+      </Link>
       {visibility === 'private' && (
         <div className="flex flex-row mt-2 space-x-2">
           <button
@@ -85,6 +91,6 @@ export default function Publication({ post, visibility }) {
           </button>
         </div>
       )}
-    </>
+    </article>
   );
 }
