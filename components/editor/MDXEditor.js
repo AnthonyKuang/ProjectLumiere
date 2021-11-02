@@ -84,7 +84,7 @@ export default function Editor({ state, setConfig, collapsed }) {
           <article className="prose break-words bg-gray-100 dark:bg-gray-900 max-w-none dark:prose-dark">
             <div className="container">
               <ErrorBoundary FallbackComponent={FallbackComponent}>
-                {state.file.result({ components: MDXComponents })}
+                {state.file.result()}
               </ErrorBoundary>
             </div>
           </article>
