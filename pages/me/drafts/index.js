@@ -3,7 +3,7 @@ import Draft from '@components/ui/Draft';
 import Head from 'next/head';
 import prisma from '@lib/prisma';
 import { getSession, useSession, signIn } from 'next-auth/react';
-import { FaRegFile } from "react-icons/fa";
+import { FaRegFile } from 'react-icons/fa';
 
 export default function Drafts({ drafts }) {
   const { status } = useSession({
@@ -24,16 +24,20 @@ export default function Drafts({ drafts }) {
       <>
         <h1 className="mb-5 heading-primary">My Drafts</h1>
         {drafts.length === 0 ? (
-          <div className="flex flex-col items-center justify-center w-full h-full p-5 border border-gray-700 rounded-xl">
+          <section className="flex flex-col items-center justify-center w-full h-full p-5 border border-gray-700 rounded-xl">
             <FaRegFile className="w-8 h-8 mb-5 text-gray-500" />
             <h2 className="text-xl font-bold">No drafts were found.</h2>
             <p>
-              Go ahead and create a publication! Saved drafts can be found here after
-              you create and save an unpublished publication.
+              Go ahead and create a publication! Saved drafts can be found here
+              after you create and save an unpublished publication.
             </p>
-          </div>
+          </section>
         ) : (
-          drafts.map((draft) => <Draft post={draft} key={draft.id} />)
+          <section className="space-y-5">
+            {drafts.map((draft) => (
+              <Draft post={draft} key={draft.id} />
+            ))}
+          </section>
         )}
       </>
     </>
