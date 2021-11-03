@@ -1,10 +1,10 @@
-import { useMemo, memo, useCallback, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 import { VFileMessage } from 'vfile-message';
 import CodeMirror from 'rodemirror';
 import { basicSetup } from '@codemirror/basic-setup';
 import { markdown as langMarkdown } from '@codemirror/lang-markdown';
 import { oneDark } from '@codemirror/theme-one-dark';
-import { keymap } from '@codemirror/view';
+import { EditorView, keymap } from '@codemirror/view';
 import { indentWithTab } from '@codemirror/commands';
 import { ErrorBoundary } from 'react-error-boundary';
 import Split from 'react-split';
@@ -39,10 +39,17 @@ const FallbackComponent = ({ error }) => {
 };
 
 export default function Editor({ state, setConfig, collapsed }) {
-  const extensions = useMemo(
-    () => [basicSetup, oneDark, keymap.of([indentWithTab]), langMarkdown()],
-    []
-  );
+  const [extensions, setExtensions] = useState([
+    basicSetup,
+    oneDark,
+    keymap.of([indentWithTab]),
+    langMarkdown(),
+  ]);
+
+  useEffect(() => {
+    console.log(extensions);
+  }, [extensions]);
+
   const [editorView, setEditorView] = useState(null);
   const onUpdate = useCallback(
     (v) => {
@@ -77,6 +84,26 @@ export default function Editor({ state, setConfig, collapsed }) {
           onUpdate={onUpdate}
           onEditorViewChange={(view) => setEditorView(view)}
         />
+        <button
+          type="button"
+          onClick={() =>
+            setExtensions([...extensions, EditorView.lineWrapping])
+          }
+        >
+          Click me to add line wrapping!
+        </button>
+        <button
+          type="button"
+          onClick={() =>
+            setExtensions(
+              extensions.filter(
+                (extension) => extension !== EditorView.lineWrapping
+              )
+            )
+          }
+        >
+          Click me to remove line wrapping!
+        </button>
       </section>
 
       <section className="overflow-y-auto">
