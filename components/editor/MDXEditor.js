@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { VFileMessage } from 'vfile-message';
 import CodeMirror from 'rodemirror';
 import { basicSetup } from '@codemirror/basic-setup';
@@ -45,11 +45,6 @@ export default function Editor({ state, setConfig, collapsed }) {
     keymap.of([indentWithTab]),
     langMarkdown(),
   ]);
-
-  useEffect(() => {
-    console.log(extensions);
-  }, [extensions]);
-
   const [editorView, setEditorView] = useState(null);
   const onUpdate = useCallback(
     (v) => {
