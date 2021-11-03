@@ -6,7 +6,7 @@ const UsernameForm = ({ initialUsername, redirectUrl }) => {
   const [username, setUsername] = useState('');
   const [prompt, setPrompt] = useState(null);
   const router = useRouter();
-  const [_, setValue] = useLocalStorage('refresh', false);
+  const [, setValue] = useLocalStorage('refresh', false);
 
   const submitUsername = async (e) => {
     e.preventDefault();
