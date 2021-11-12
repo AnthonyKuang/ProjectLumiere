@@ -111,7 +111,7 @@ export default function Home({ tweets }) {
               <div className="absolute bg-gradient-to-tr from-amber-600 to-pink-600 -inset-0.5 rounded-lg blur-2xl group-hover:blur-xl group-hover:opacity-60 transition-all duration-200 opacity-50" />
               <Tweet key={tweets[0].id} forceDark {...tweets[0]} />
             </div>
-            <div className="relative inline-block group rotate-3 bottom-4 left-28">
+            <div className="relative inline-block group rotate-3 bottom-4 sm:left-10 left-28">
               <div className="absolute bg-gradient-to-tr from-purple-600 to-blue-600 -inset-0.5 rounded-lg blur-2xl group-hover:blur-xl group-hover:opacity-60 transition-all duration-200 opacity-50" />
               <div className="relative py-4 leading-none bg-gray-900 rounded-lg px-7 opacity-90">
                 <pre className="leading-normal language-jsx text-2xs">
