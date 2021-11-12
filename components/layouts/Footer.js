@@ -5,315 +5,104 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { Disclosure } from '@headlessui/react';
 
+const sitemap = [
+  {
+    name: 'Media',
+    content: [
+      { name: 'Lumiere Press', link: '/press' },
+      { name: 'Lumiere Channel', link: '/channel' },
+      { name: 'About Media', link: '/media' },
+    ],
+  },
+  {
+    name: 'Resources',
+    content: [
+      { name: 'Contributing', link: '/resources/contributing' },
+      { name: 'Changelog', link: '/resources/changelog' },
+      { name: 'Contact Us', link: '/resources/contact' },
+    ],
+  },
+  {
+    name: 'Company',
+    content: [
+      { name: 'Home', link: '/' },
+      { name: 'Blog', link: '/company/blog' },
+      { name: 'Team', link: '/company/team' },
+      { name: 'Support Us', link: '/company/donate' },
+      { name: 'Brand', link: '/company/brand' },
+    ],
+  },
+  {
+    name: 'Legal',
+    content: [
+      { name: 'Privacy Policy', link: '/company/legal/privacy' },
+      { name: 'Terms and Conditions', link: '/company/legal/terms' },
+      { name: 'Contributors', link: '/company/legal/cla' },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="pt-16 pb-10 bg-gray-800 border-t border-gray-700 mt-28 md:pt-12 md:pb-6">
       <div className="container">
+        {/* Navigation menu for large screens (md and above) */}
         <nav className="flex justify-between text-sm leading-loose transition-colors lg:text-xs md:hidden">
-          <ul>
-            <h3 className="heading-tertiary">Media</h3>
-            <li>
-              <Link href="/press">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Lumiere Press
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/channel">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Lumiere Channel
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/media">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  About Media
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <h3 className="heading-tertiary">Resources</h3>
-            <li>
-              <Link href="/resources/contributing">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Contributing
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources/changelog">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Changelog
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resources/contact">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Contact Us
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <h3 className="heading-tertiary">Company</h3>
-            <li>
-              <Link href="/">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/blog">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Blog
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/team">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Team
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/donate">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Support Us
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/brand">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Brand
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <h3 className="heading-tertiary">Legal</h3>
-            <li>
-              <Link href="/company/legal/privacy">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Privacy Policy
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/legal/terms">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Terms and Conditions
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company/legal/cla">
-                <a className="font-normal text-gray-500 hover:text-gray-400">
-                  Contributors
-                </a>
-              </Link>
-            </li>
-          </ul>
+          {sitemap.map((category) => (
+            <ul key={category.name}>
+              <h3 className="heading-tertiary">{category.name}</h3>
+              {category.content.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.link}>
+                    <a className="font-normal text-gray-500 transition-colors duration-200 hover:text-gray-400">
+                      {item.name}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ))}
         </nav>
 
+        {/* Navigation menu for small screens (sm and below) */}
         <nav className="text-xs text-gray-500">
-          <Disclosure
-            as="div"
-            className="hidden border-b border-gray-700 md:block"
-          >
-            {({ open }) => (
-              <>
-                <Disclosure.Button
-                  as="h3"
-                  className="flex items-center justify-between py-4 cursor-pointer heading-tertiary"
-                >
-                  <p>Media</p>
-                  {open ? (
-                    <FiMinus className="w-2.5 h-2.5" />
-                  ) : (
-                    <FiPlus className="w-2.5 h-2.5" />
-                  )}
-                </Disclosure.Button>
-                <Disclosure.Panel as="ul" className="mt-1 ml-3">
-                  <li>
-                    <Link href="/press">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Lumiere Press
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/channel">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Lumiere Channel
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/media">
-                      <a className="block mb-4 font-normal text-gray-500 hover:text-gray-400">
-                        About Media
-                      </a>
-                    </Link>
-                  </li>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
-
-          <Disclosure
-            as="div"
-            className="hidden border-b border-gray-700 md:block"
-          >
-            {({ open }) => (
-              <>
-                <Disclosure.Button
-                  as="h3"
-                  className="flex items-center justify-between py-4 cursor-pointer heading-tertiary"
-                >
-                  <p>Resources</p>
-                  {open ? (
-                    <FiMinus className="w-2.5 h-2.5" />
-                  ) : (
-                    <FiPlus className="w-2.5 h-2.5" />
-                  )}
-                </Disclosure.Button>
-                <Disclosure.Panel as="ul" className="mt-1 ml-3">
-                  <li>
-                    <Link href="/resources/contributing">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Contributing
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/changelog">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Changelog
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/contact">
-                      <a className="block mb-4 font-normal text-gray-500 hover:text-gray-400">
-                        Contact Us
-                      </a>
-                    </Link>
-                  </li>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
-
-          <Disclosure
-            as="div"
-            className="hidden border-b border-gray-700 md:block"
-          >
-            {({ open }) => (
-              <>
-                <Disclosure.Button
-                  as="h3"
-                  className="flex items-center justify-between py-4 cursor-pointer heading-tertiary"
-                >
-                  <p>Company</p>
-                  {open ? (
-                    <FiMinus className="w-2.5 h-2.5" />
-                  ) : (
-                    <FiPlus className="w-2.5 h-2.5" />
-                  )}
-                </Disclosure.Button>
-                <Disclosure.Panel as="ul" className="mt-1 ml-3">
-                  <li>
-                    <Link href="/">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Home
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/blog">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Blog
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/team">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Team
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/donate">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Support Us
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/brand">
-                      <a className="block mb-4 font-normal text-gray-500 hover:text-gray-400">
-                        Brand
-                      </a>
-                    </Link>
-                  </li>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
-
-          <Disclosure
-            as="div"
-            className="hidden border-b border-gray-700 md:block"
-          >
-            {({ open }) => (
-              <>
-                <Disclosure.Button
-                  as="h3"
-                  className="flex items-center justify-between py-4 cursor-pointer heading-tertiary"
-                >
-                  <p>Legal</p>
-                  {open ? (
-                    <FiMinus className="w-2.5 h-2.5" />
-                  ) : (
-                    <FiPlus className="w-2.5 h-2.5" />
-                  )}
-                </Disclosure.Button>
-                <Disclosure.Panel as="ul" className="mt-1 ml-3">
-                  <li>
-                    <Link href="/company/legal/privacy">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Privacy Policy
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/legal/terms">
-                      <a className="block mb-2 font-normal text-gray-500 hover:text-gray-400">
-                        Terms and Conditions
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/company/legal/cla">
-                      <a className="block mb-4 font-normal text-gray-500 hover:text-gray-400">
-                        Contributors
-                      </a>
-                    </Link>
-                  </li>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
+          {sitemap.map((category) => (
+            <Disclosure
+              as="div"
+              className="hidden border-b border-gray-700 md:block"
+              key={category.name}
+            >
+              {({ open }) => (
+                <>
+                  <Disclosure.Button
+                    as="h3"
+                    className="flex items-center justify-between py-4 cursor-pointer heading-tertiary"
+                  >
+                    <p>{category.name}</p>
+                    {open ? (
+                      <FiMinus className="w-2.5 h-2.5" />
+                    ) : (
+                      <FiPlus className="w-2.5 h-2.5" />
+                    )}
+                  </Disclosure.Button>
+                  <Disclosure.Panel as="ul" className="mt-1 ml-3">
+                    {category.content.map((item) => (
+                      <li key={item.name}>
+                        <Link href={item.link}>
+                          <a className="block mb-2 font-normal text-gray-500 transition-colors duration-200 hover:text-gray-400">
+                            {item.name}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          ))}
         </nav>
 
+        {/* Bottom strip for large screens (md and above) */}
         <section className="md:hidden">
           <figure className="flex items-center cursor-default select-none mt-14">
             <div className="relative mb-0.5 mr-1.5 w-7 h-7">
@@ -377,6 +166,7 @@ export default function Footer() {
           </div>
         </section>
 
+        {/* Bottom strip for small screens (sm and above) */}
         <section className="hidden md:block">
           <figure className="flex items-center justify-center mt-12 cursor-default select-none">
             <div className="relative w-6 h-6 mb-0.5 mr-1">
