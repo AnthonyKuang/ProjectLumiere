@@ -3,7 +3,10 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import projectLumiere from '@public/images/logos/ProjectLumiere.svg';
+import { BsGithub, BsGoogle } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+
+const icons = {};
 
 export default function Authenticate({ providers }) {
   const router = useRouter();
@@ -24,6 +27,19 @@ export default function Authenticate({ providers }) {
 
   if (status === 'loading') {
     return null;
+  }
+
+  function GetIcon(iconName) {
+    const style = 'inline ml-4';
+
+    switch (iconName) {
+      case 'GitHub':
+        return <BsGithub className={style} />;
+      case 'Google':
+        return <BsGoogle className={style} />;
+      default:
+        return <BsGoogle />;
+    }
   }
 
   return (
@@ -49,7 +65,14 @@ export default function Authenticate({ providers }) {
         </div>
         <div className="relative">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75" />
-          <section className="relative max-w-3xl py-4 bg-gray-900 rounded-lg px-7">
+          <section className="relative flex flex-col items-center justify-center max-w-3xl py-4 bg-gray-900 rounded-lg px-7">
+            <Image
+              src={projectLumiere}
+              alt="Project Lumiere logo"
+              width={70}
+              height={70}
+            />
+            <p className="my-4 text-xl font-bold">Sign into Lumiere</p>
             {Object.values(providers).map((provider) => (
               <button
                 type="button"
@@ -57,9 +80,10 @@ export default function Authenticate({ providers }) {
                 onClick={() => {
                   signIn(provider.id);
                 }}
-                className="block"
+                className="flex items-center justify-center px-3 py-2 my-2 text-xl font-bold tracking-wider duration-200 border-4 border-gray-600 rounded-lg cursor-pointer w-72 hover:border-gray-300 hover:text-gray-300"
               >
                 <p>Sign in with {provider.name}</p>
+                {GetIcon(provider.name)}
               </button>
             ))}
           </section>

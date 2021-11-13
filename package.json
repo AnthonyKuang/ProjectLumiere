@@ -19,7 +19,7 @@
     "@prisma/client": "^3.4.1",
     "ahooks": "^2.10.12",
     "date-fns": "^2.25.0",
-    "esbuild": "^0.13.12",
+    "esbuild": "^0.12.29",
     "mdx-bundler": "^7.0.0",
     "next": "12.0.3",
     "next-auth": "^4.0.0-beta.6",
@@ -49,7 +49,7 @@
     "vfile": "^5.2.0",
     "vfile-message": "^3.0.2",
     "vfile-statistics": "^2.0.0",
-    "xdm": "^3.2.0"
+    "xdm": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

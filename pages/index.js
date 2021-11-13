@@ -111,69 +111,6 @@ export default function Home({ tweets }) {
               <div className="absolute bg-gradient-to-tr from-amber-600 to-pink-600 -inset-0.5 rounded-lg blur-2xl group-hover:blur-xl group-hover:opacity-60 transition-all duration-200 opacity-50" />
               <Tweet key={tweets[0].id} forceDark {...tweets[0]} />
             </div>
-            <div className="relative inline-block group rotate-3 bottom-4 sm:left-10 left-28">
-              <div className="absolute bg-gradient-to-tr from-purple-600 to-blue-600 -inset-0.5 rounded-lg blur-2xl group-hover:blur-xl group-hover:opacity-60 transition-all duration-200 opacity-50" />
-              <div className="relative py-4 leading-none bg-gray-900 rounded-lg px-7 opacity-90">
-                <pre className="leading-normal language-jsx text-2xs">
-                  <code className="language-jsx">
-                    <span className="token comment">
-                      {'/* This is a header component */'}
-                    </span>
-                    <br />
-                    <span className="token keyword module">export</span>{' '}
-                    <span className="token keyword module">default</span>{' '}
-                    <span className="token keyword">function</span>{' '}
-                    <span className="token function">
-                      <span className="token maybe-className-name">Header</span>
-                    </span>
-                    <span className="token punctuation">(</span>
-                    <span className="token punctuation">)</span>{' '}
-                    <span className="token punctuation">{'{'}</span>
-                    <br />
-                    <span className="ml-4 token keyword control-flow">
-                      return
-                    </span>{' '}
-                    <span className="token punctuation">(</span>
-                    <br />
-                    <span className="token tag">
-                      <span className="token tag">
-                        <span className="ml-8 token punctuation">&lt;</span>div
-                      </span>
-                      <span className="token punctuation">&gt;</span>
-                    </span>
-                    <br />
-                    <span className="token plain-text" />
-                    <span className="token tag">
-                      <span className="token tag">
-                        <span className="ml-12 token punctuation">&lt;</span>
-                        header
-                      </span>
-                      <span className="token punctuation">&gt;</span>
-                    </span>
-                    <span className="token plain-text">Header</span>
-                    <span className="token tag">
-                      <span className="token tag">
-                        <span className="token punctuation">&lt;/</span>header
-                      </span>
-                      <span className="token punctuation">&gt;</span>
-                    </span>
-                    <span className="token plain-text" />
-                    <br />
-                    <span className="token tag">
-                      <span className="token tag">
-                        <span className="ml-8 token punctuation">&lt;/</span>div
-                      </span>
-                      <span className="token punctuation">&gt;</span>
-                    </span>
-                    <br />
-                    <span className="ml-4 token punctuation">)</span>
-                    <span className="token punctuation">;</span>
-                    <br />
-                    <span className="token punctuation">{'}'}</span>
-                  </code>
-                </pre>
-              </div>
-            </div>
           </figure>
           <div className="flex-1 mt-16 ml-32 md:ml-0">
             <h2 className="text-gray-200 heading-secondary">
