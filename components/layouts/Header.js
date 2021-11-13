@@ -75,7 +75,7 @@ export default function Header({
               <input
                 type="text"
                 value={title}
-                className="px-4 py-2 ml-3 text-xl text-gray-300 transition-colors bg-transparent rounded-lg cursor-not-allowed w-96 hover:bg-gray-800"
+                className="px-4 py-2 ml-3 text-xl text-gray-300 transition-colors bg-transparent border-none rounded-lg cursor-not-allowed w-96 hover:bg-gray-800"
                 disabled
               />
             )}
