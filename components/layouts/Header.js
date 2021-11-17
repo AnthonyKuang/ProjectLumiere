@@ -151,6 +151,11 @@ export default function Header({
                 Publications
               </a>
             </Link>
+            <Link href="/company/blog">
+              <a className="ml-8 font-medium text-gray-400 transition-colors lg:text-xs hover:text-gray-300 lg:ml-7">
+                Blog
+              </a>
+            </Link>
             <Popover className="ml-8 lg:ml-7">
               {({ open }) => (
                 <>
@@ -257,6 +262,11 @@ export default function Header({
           <Link href="/press">
             <a className="ml-8 font-medium text-gray-400 transition-colors lg:text-xs hover:text-gray-300 lg:ml-7">
               Publications
+            </a>
+          </Link>
+          <Link href="/company/blog">
+            <a className="ml-8 font-medium text-gray-400 transition-colors lg:text-xs hover:text-gray-300 lg:ml-7">
+              Blog
             </a>
           </Link>
           <Popover className="ml-8 lg:ml-7">
